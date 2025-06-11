@@ -11,6 +11,7 @@ function RandomCard({ data }) {
   useEffect(() => {
     const randomIndex = randomNumber(0, data.length - 1);
     setRandomCountry(data[randomIndex]);
+    console.log(`Random country selected: ${data[randomIndex].name}`);
   }, data);
 
   return (
