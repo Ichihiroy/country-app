@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "./Card.jsx";
 
 function Main({ data, region, inputValue }) {
   let countryData = data;

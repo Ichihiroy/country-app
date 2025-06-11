@@ -1,4 +1,4 @@
-import RandomCard from "./RandomCard";
+import RandomCard from "./RandomCard.jsx";
 
 function Title({ data, setInputValue, inputValue }) {
   return (

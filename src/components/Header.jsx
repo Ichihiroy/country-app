@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "./Nav";
-import Title from "./Title";
+import Nav from "./Nav.jsx";
+import Title from "./Title.jsx";
 
 function Header({ data, setRegion, region, setInputValue, inputValue }) {
   return (
