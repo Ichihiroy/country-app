@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 function Nav({ data, setRegion }) {
   const regions = data ? data.map((country) => country.region) : [];
@@ -26,29 +27,23 @@ function Nav({ data, setRegion }) {
               </svg>
             </a>
             <ul className="items-stretch hidden space-x-3 lg:flex">
-              <li className="flex" onClick={() => setRegion("All")}>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
+              <Link
+                to="/country-app"
+                onClick={() => setRegion("All")}
+                className="flex items-center px-4 -mb-1  dark:border-"
+              >
+                <li className="flex">All</li>
+              </Link>
+
+              {uniqueRegions.map((region, index) => (
+                <Link
+                  to={`country-app/regions/${region}`}
+                  key={index}
+                  onClick={() => setRegion(region)}
                   className="flex items-center px-4 -mb-1  dark:border-"
                 >
-                  All
-                </a>
-              </li>
-              {uniqueRegions.map((region, index) => (
-                <li
-                  key={index}
-                  className="flex"
-                  onClick={() => setRegion(region)}
-                >
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="flex items-center px-4 -mb-1 dark:border-gray-200 dark:hover:text-violet-600 dark:hover:bg-gray-200"
-                  >
-                    {region}
-                  </a>
-                </li>
+                  <li className="flex ">{region}</li>
+                </Link>
               ))}
             </ul>
           </div>

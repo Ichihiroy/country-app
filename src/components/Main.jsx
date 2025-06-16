@@ -16,7 +16,12 @@ function Main({ data, region, inputValue }) {
       {data ? (
         <div className="container mx-auto px-4 py-8 flex items-center justify-center flex-wrap gap-4">
           {countryData.map((country, i) => (
-            <Card key={i} flag={country.flag} name={country.name} />
+            <Card
+              key={i}
+              flag={country.flag}
+              name={country.name}
+              alpha3Code={country.alpha3Code}
+            />
           ))}
         </div>
       ) : (
