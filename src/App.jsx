@@ -9,6 +9,7 @@ import Main from "./components/Main.jsx";
 import Footer from "./components/Footer.jsx";
 import Details from "./components/Details.jsx";
 import Error from "./components/Error.jsx";
+import { Navigate } from "react-router";
 
 function App() {
   const [region, setRegion] = useState("All");
