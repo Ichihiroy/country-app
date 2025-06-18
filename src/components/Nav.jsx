@@ -27,12 +27,12 @@ function Nav({ data, setRegion }) {
               </svg>
             </a>
             <ul className="items-stretch hidden space-x-3 lg:flex">
-              <li
-                onClick={() => setRegion("All")}
+              <Link
+                to={"/"}
                 className="flex items-center px-4 -mb-1  dark:border- cursor-pointer"
               >
-                All
-              </li>
+                <li onClick={() => setRegion("All")}>All</li>
+              </Link>
 
               {uniqueRegions.map((region, index) => (
                 <li

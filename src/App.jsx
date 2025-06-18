@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
-
 import Header from "./components/Header.jsx";
-import Main from "./components/Main.jsx";
 import Footer from "./components/Footer.jsx";
-import Details from "./components/Details.jsx";
-import Error from "./components/Error.jsx";
 import { Navigate, Outlet } from "react-router";
 
 function App() {
