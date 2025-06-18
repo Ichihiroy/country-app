@@ -11,8 +11,8 @@ function Nav({ data, setRegion }) {
         <div className="container flex justify-between h-16 mx-auto">
           <div className="flex">
             <a
+              to={"/"}
               rel="noopener noreferrer"
-              href="#"
               aria-label="Back to homepage"
               className="flex items-center p-2"
             >
@@ -27,23 +27,21 @@ function Nav({ data, setRegion }) {
               </svg>
             </a>
             <ul className="items-stretch hidden space-x-3 lg:flex">
-              <Link
-                to="/"
+              <li
                 onClick={() => setRegion("All")}
-                className="flex items-center px-4 -mb-1  dark:border-"
+                className="flex items-center px-4 -mb-1  dark:border- cursor-pointer"
               >
-                <li className="flex">All</li>
-              </Link>
+                All
+              </li>
 
               {uniqueRegions.map((region, index) => (
-                <Link
-                  to={`/regions/${region}`}
+                <li
                   key={index}
                   onClick={() => setRegion(region)}
-                  className="flex items-center px-4 -mb-1  dark:border-"
+                  className="flex items-center px-4 -mb-1  dark:border- cursor-pointer"
                 >
-                  <li className="flex ">{region}</li>
-                </Link>
+                  {region}
+                </li>
               ))}
             </ul>
           </div>

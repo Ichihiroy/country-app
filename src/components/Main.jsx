@@ -1,6 +1,9 @@
 import Card from "./Card.jsx";
+import { useOutletContext } from "react-router";
 
-function Main({ data, region, inputValue }) {
+function Main() {
+  const { data, region, inputValue } = useOutletContext();
+
   let countryData = data;
   if (region !== "All")
     countryData = data.filter((country) => country.region === region);
