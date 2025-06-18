@@ -28,7 +28,7 @@ function Nav({ data, setRegion }) {
             </a>
             <ul className="items-stretch hidden space-x-3 lg:flex">
               <Link
-                to="/country-app"
+                to="/"
                 onClick={() => setRegion("All")}
                 className="flex items-center px-4 -mb-1  dark:border-"
               >
@@ -37,7 +37,7 @@ function Nav({ data, setRegion }) {
 
               {uniqueRegions.map((region, index) => (
                 <Link
-                  to={`country-app/regions/${region}`}
+                  to={`/regions/${region}`}
                   key={index}
                   onClick={() => setRegion(region)}
                   className="flex items-center px-4 -mb-1  dark:border-"

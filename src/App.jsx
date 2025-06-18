@@ -26,16 +26,16 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/country-app",
+      path: "/",
       element: <Main data={data} region={region} inputValue={inputValue} />,
     },
     {
-      path: "/country-app/details/:alpha3Code",
+      path: "/details/:alpha3Code",
       element: <Details data={data} />,
       errorElement: <Error />,
     },
     {
-      path: `/country-app/regions/:${region}`,
+      path: `/regions/:${region}`,
       element: <Main data={data} region={region} inputValue={inputValue} />,
     },
   ]);
