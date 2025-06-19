@@ -20,6 +20,11 @@ const router = createHashRouter([
         element: <Details />,
         errorElement: <Error />,
       },
+      {
+        path: "/regions/:region",
+        element: <Main />,
+        errorElement: <Error />,
+      },
     ],
   },
 ]);

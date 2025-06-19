@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-function Nav({ data, setRegion }) {
+function Nav({ data }) {
   const regions = data ? data.map((country) => country.region) : [];
   const uniqueRegions = [...new Set(regions)];
 
@@ -31,17 +31,17 @@ function Nav({ data, setRegion }) {
                 to={"/"}
                 className="flex items-center px-4 -mb-1  dark:border- cursor-pointer"
               >
-                <li onClick={() => setRegion("All")}>All</li>
+                <li>All</li>
               </Link>
 
               {uniqueRegions.map((region, index) => (
-                <li
+                <Link
+                  to={"/regions/" + region}
                   key={index}
-                  onClick={() => setRegion(region)}
                   className="flex items-center px-4 -mb-1  dark:border- cursor-pointer"
                 >
-                  {region}
-                </li>
+                  <li key={index}>{region}</li>
+                </Link>
               ))}
             </ul>
           </div>

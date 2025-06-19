@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
-import { Navigate, Outlet } from "react-router";
+import { Outlet, useParams } from "react-router";
 
 function App() {
-  const [region, setRegion] = useState("All");
   const [inputValue, setInputValue] = useState("");
+
+  let { region } = useParams();
+  if (region === undefined) {
+    region = "All";
+  }
+  console.log(region);
 
   const [data, setData] = useState();
   useEffect(() => {
@@ -21,7 +26,6 @@ function App() {
       <Header
         data={data}
         region={region}
-        setRegion={setRegion}
         setInputValue={setInputValue}
         inputValue={inputValue}
       />
