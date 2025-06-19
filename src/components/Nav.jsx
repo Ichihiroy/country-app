@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 function Nav({ data }) {
   const regions = data ? data.map((country) => country.region) : [];
@@ -27,21 +26,22 @@ function Nav({ data }) {
               </svg>
             </a>
             <ul className="items-stretch hidden space-x-3 lg:flex">
-              <Link
+              <NavLink
+                end
                 to={"/"}
                 className="flex items-center px-4 -mb-1  dark:border- cursor-pointer"
               >
                 <li>All</li>
-              </Link>
+              </NavLink>
 
               {uniqueRegions.map((region, index) => (
-                <Link
+                <NavLink
                   to={"/regions/" + region}
                   key={index}
                   className="flex items-center px-4 -mb-1  dark:border- cursor-pointer"
                 >
                   <li key={index}>{region}</li>
-                </Link>
+                </NavLink>
               ))}
             </ul>
           </div>

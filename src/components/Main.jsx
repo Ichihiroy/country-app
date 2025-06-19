@@ -28,7 +28,9 @@ function Main() {
           ))}
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="container mx-auto px-4 py-8 flex items-center justify-center">
+          <p className="text-lg">Loading...</p>
+        </div>
       )}
     </>
   );
