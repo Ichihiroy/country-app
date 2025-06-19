@@ -1,6 +1,13 @@
 import RandomCard from "./RandomCard.jsx";
+import { useEffect, useState } from "react";
 
 function Title({ data, setInputValue, inputValue }) {
+  const [visibility, setVisibility] = useState("block");
+
+  useEffect(() => {
+    inputValue ? setVisibility("none") : setVisibility("block");
+  }, [inputValue]);
+
   return (
     <div>
       <section className="dark:bg-gray-100 dark:text-gray-800">
@@ -25,7 +32,7 @@ function Title({ data, setInputValue, inputValue }) {
               className="flex justify-center align-center px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-200 dark:text-gray-800 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2"
             />
           </div>
-          {!inputValue && <RandomCard data={data} />}
+          {<RandomCard data={data} visibility={visibility} />}
         </div>
       </section>
     </div>

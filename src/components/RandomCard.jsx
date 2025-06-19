@@ -1,7 +1,6 @@
-import React from "react";
 import { useEffect, useState } from "react";
 
-function RandomCard({ data }) {
+function RandomCard({ data, visibility }) {
   const [randomCountry, setRandomCountry] = useState([]);
 
   function randomNumber(min, max) {
@@ -12,10 +11,13 @@ function RandomCard({ data }) {
     const randomIndex = randomNumber(0, data.length - 1);
     setRandomCountry(data[randomIndex]);
     console.log(`Random country selected: ${data[randomIndex].name}`);
-  }, data);
+  }, [data]);
 
   return (
-    <div className="max-w-xs p-6 m-5 rounded-md shadow-lg dark:bg-gray-30 dark:text-gray-900">
+    <div
+      className="max-w-xs p-6 m-5 rounded-md shadow-lg dark:bg-gray-30 dark:text-gray-900"
+      style={{ display: visibility }}
+    >
       <img
         src={randomCountry.flag}
         alt=""
