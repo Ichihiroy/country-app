@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { Outlet, useParams } from "react-router";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
-import { Outlet, useParams } from "react-router";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
