@@ -2,11 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="p-6 dark:bg-gray-100 dark:text-gray-800">
+    <footer className="p-6 dark:bg-gray-700 dark:text-gray-100">
       <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-4">
         <div className="flex flex-col space-y-4">
           <h2 className="font-medium">Getting started</h2>
-          <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
+          <div className="flex flex-col space-y-2 text-sm">
             <a rel="noopener noreferrer" href="#">
               Installation
             </a>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <h2 className="font-medium">Core Concepts</h2>
-          <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
+          <div className="flex flex-col space-y-2 text-sm">
             <a rel="noopener noreferrer" href="#">
               Utility-First
             </a>
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <h2 className="font-medium">Customization</h2>
-          <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
+          <div className="flex flex-col space-y-2 text-sm">
             <a rel="noopener noreferrer" href="#">
               Configuration
             </a>
@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <h2 className="font-medium">Community</h2>
-          <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
+          <div className="flex flex-col space-y-2 text-sm">
             <a rel="noopener noreferrer" href="#">
               GitHub
             </a>
@@ -101,9 +101,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-center justify-center px-6 pt-12 text-sm">
-        <span className="dark:text-gray-600">
-          © Copyright 1986. All Rights Reserved.
-        </span>
+        <span>© Copyright 1986. All Rights Reserved.</span>
       </div>
     </footer>
   );
