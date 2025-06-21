@@ -5,6 +5,7 @@ import Footer from "./components/Footer.jsx";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   let { region } = useParams();
   if (region === undefined) {
@@ -14,9 +15,7 @@ function App() {
 
   const [data, setData] = useState();
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/TheOksigen/purfect_data/refs/heads/main/country.json"
-    )
+    fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
