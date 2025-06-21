@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { useOutletContext } from "react-router";
-import Card from "./Card";
+import Card from "../components/Card";
 
 const Details = () => {
   const { data } = useOutletContext();

@@ -15,7 +15,7 @@ function RandomCard({ data, visibility }) {
 
   return (
     <div
-      className="max-w-xs p-6 m-5 rounded-md shadow-lg dark:bg-gray-30 dark:text-gray-900"
+      className="max-w-xs p-6 m-5 rounded-md shadow-lg dark:bg-gray-600 bg-gray-100 dark:text-gray-100"
       style={{ display: visibility }}
     >
       <img
@@ -24,14 +24,14 @@ function RandomCard({ data, visibility }) {
         className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
       />
       <div className="mt-6 mb-2">
-        <span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-600">
+        <span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-400 text-orange-500">
           Random Country
         </span>
         <h2 className="text-xl font-semibold tracking-wide">
           {randomCountry.name}
         </h2>
       </div>
-      <p className="dark:text-gray-800">
+      <p>
         Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed
         feugiat mi. Etiam ut lacinia dui.
       </p>

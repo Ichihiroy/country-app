@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 function Card({ flag, name, alpha3Code }) {
   return (
-    <div className="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+    <div className="max-w-xs rounded-md shadow-md dark:bg-gray-700 dark:text-gray-100 bg-white">
       <img
         src={flag}
         alt=""
@@ -15,13 +15,13 @@ function Card({ flag, name, alpha3Code }) {
             <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
           </Link>
 
-          <p className="dark:text-gray-800">
+          <p>
             Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.
           </p>
         </div>
         <button
           type="button"
-          className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50"
+          className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600  bg-orange-500 text-gray-100 dark:text-gray-50"
         >
           Read more
         </button>

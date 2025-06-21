@@ -1,4 +1,4 @@
-import Card from "./Card.jsx";
+import Card from "../components/Card.jsx";
 import { useOutletContext } from "react-router";
 
 function Main() {
@@ -15,9 +15,9 @@ function Main() {
   }
 
   return (
-    <>
+    <div className="dark:bg-gray-600 bg-gray-100">
       {data ? (
-        <div className="container mx-auto px-4 py-8 flex items-center justify-center flex-wrap gap-4">
+        <div className="container mx-auto px-4 py-8 flex items-center justify-center flex-wrap gap-4  ">
           {countryData.map((country, i) => (
             <Card
               key={i}
@@ -32,7 +32,7 @@ function Main() {
           <p className="text-lg">Loading...</p>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
