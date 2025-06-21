@@ -9,7 +9,7 @@ const Details = () => {
   const country = data.find((country) => country.alpha3Code === alpha3Code);
 
   return (
-    <div className="container mx-auto px-4 py-8 flex items-center justify-center flex-wrap gap-4">
+    <div className="mx-auto px-4 py-8 flex items-center justify-center flex-wrap gap-4 dark:bg-gray-600">
       <Card flag={country.flag} name={country.name} />
     </div>
   );
