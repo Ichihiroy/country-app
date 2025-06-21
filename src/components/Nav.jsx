@@ -1,17 +1,27 @@
 import { Link, NavLink } from "react-router";
 import { CiDark, CiLight } from "react-icons/ci";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Nav({ data }) {
   const regions = data ? data.map((country) => country.region) : [];
   const uniqueRegions = [...new Set(regions)];
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDark]);
 
   const toggleDarkMode = () => {
     setIsDark(!isDark);
+    localStorage.setItem("theme", !isDark ? "dark" : "light");
     document.documentElement.classList.toggle("dark");
-    console.log("Dark mode toggled:", !isDark);
   };
 
   return (
