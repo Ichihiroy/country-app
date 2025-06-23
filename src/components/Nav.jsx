@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 import { CiDark, CiLight } from "react-icons/ci";
 import { useState, useEffect } from "react";
 
